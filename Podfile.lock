@@ -1,0 +1,58 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - MJExtension (3.2.1)
+  - SSZipArchive (2.4.2)
+  - SVProgressHUD (2.2.5)
+  - UMAPM (1.5.6)
+  - UMCCommonLog (2.0.2)
+  - UMCommon (7.3.6):
+    - UMDevice
+  - UMDevice (2.2.1)
+
+DEPENDENCIES:
+  - AFNetworking
+  - MJExtension
+  - SSZipArchive
+  - SVProgressHUD
+  - UMAPM
+  - UMCCommonLog
+  - UMCommon
+
+SPEC REPOS:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - AFNetworking
+    - MJExtension
+    - SSZipArchive
+    - SVProgressHUD
+    - UMAPM
+    - UMCCommonLog
+    - UMCommon
+    - UMDevice
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
+  SSZipArchive: e7b4f3d9e780c2acc1764cd88fbf2de28f26e5b2
+  SVProgressHUD: 083f84f3f3c9d4d021a0774eb13892379660f440
+  UMAPM: 5ab988b8bedfd090ee2307cb80530ba79b8ac264
+  UMCCommonLog: bea707e50c85cef4b0eb47cc5c7226bb843245ca
+  UMCommon: c61df8457c275afd4f8a2fca10c7446d66220ac0
+  UMDevice: 053478c4b4d7292f31f0a275c227d3c4007a5571
+
+PODFILE CHECKSUM: 9c8bbb06d6c32de35b4ccb162c300efec9f20579
+
+COCOAPODS: 1.11.2

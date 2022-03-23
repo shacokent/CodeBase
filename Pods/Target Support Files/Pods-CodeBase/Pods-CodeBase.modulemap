@@ -1,0 +1,6 @@
+framework module Pods_CodeBase {
+  umbrella header "Pods-CodeBase-umbrella.h"
+
+  export *
+  module * { export * }
+}

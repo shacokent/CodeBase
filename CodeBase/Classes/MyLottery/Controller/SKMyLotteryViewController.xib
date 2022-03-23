@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SKMyLotteryViewController">
+            <connections>
+                <outlet property="imageView" destination="z82-F4-2Wx" id="DW7-2o-En6"/>
+                <outlet property="loginBtn" destination="RTs-BR-W8e" id="CXm-M8-jOc"/>
+                <outlet property="view" destination="iN0-l3-epB" id="wd4-Xh-0dl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQc-Y9-vbH">
+                    <rect key="frame" x="0.0" y="70" width="414" height="34.5"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="NSCache" backgroundImage="RedButton"/>
+                    <connections>
+                        <action selector="NSCacheOnClick:" destination="-1" eventType="touchUpInside" id="WIJ-Jn-djC"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="viewDidLoad-NSThread" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azg-bV-baL">
+                    <rect key="frame" x="0.0" y="52" width="414" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="xBO-8M-hTM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击屏幕-SDWebImage第三方框架" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmK-aG-H2b">
+                    <rect key="frame" x="0.0" y="104.5" width="414" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="X4n-LL-Cy0"/>
+                        <constraint firstAttribute="height" constant="18" id="cJ5-8V-BLW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sm5-dq-hhm">
+                    <rect key="frame" x="0.0" y="122.5" width="414" height="34.5"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="RunLoop，GCD定时器，常驻线程" backgroundImage="RedButton"/>
+                    <connections>
+                        <action selector="RunLoopOnClick:" destination="-1" eventType="touchUpInside" id="09f-C5-Hp4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZi-nP-H8k">
+                    <rect key="frame" x="0.0" y="157" width="414" height="34.5"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="点击执行新线程完毕在回到常驻线程" backgroundImage="RedButton"/>
+                    <connections>
+                        <action selector="otherBtnClick:" destination="-1" eventType="touchUpInside" id="X1S-1a-GGl"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYv-YH-bHd">
+                    <rect key="frame" x="0.0" y="400.5" width="414" height="34.5"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="网络编程,SVProgressHUD,截取字符串,解析json,xml" backgroundImage="RedButton"/>
+                    <connections>
+                        <action selector="netWorkOnClick:" destination="-1" eventType="touchUpInside" id="f0t-8I-Kpj"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginScreen" translatesAutoresizingMaskIntoConstraints="NO" id="z82-F4-2Wx">
+                    <rect key="frame" x="0.0" y="191.5" width="414" height="140"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="140" id="PYy-5N-Qxa"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTs-BR-W8e">
+                    <rect key="frame" x="0.0" y="331.5" width="414" height="34.5"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="GCD" backgroundImage="RedButton"/>
+                    <connections>
+                        <action selector="loginOnClick:" destination="-1" eventType="touchUpInside" id="o2k-39-L6j"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TZ-lP-BiS">
+                    <rect key="frame" x="0.0" y="366" width="414" height="34.5"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="NSOperation" backgroundImage="RedButton"/>
+                    <connections>
+                        <action selector="signUp:" destination="-1" eventType="touchUpInside" id="GdJ-18-Y7Q"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alc-w9-CSY">
+                    <rect key="frame" x="0.0" y="435" width="414" height="34.5"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="runtime,泛型,协变,逆变,__kindof" backgroundImage="RedButton"/>
+                    <connections>
+                        <action selector="runtimeOnClick:" destination="-1" eventType="touchUpInside" id="UZO-eB-uwV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFr-er-5vU">
+                    <rect key="frame" x="0.0" y="469.5" width="414" height="34.5"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="const,宏，static,extern,父子控制器" backgroundImage="RedButton"/>
+                    <connections>
+                        <action selector="constOnClick:" destination="-1" eventType="touchUpInside" id="vNi-Dw-YIN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFB-e1-4dd">
+                    <rect key="frame" x="0.0" y="504" width="414" height="34.5"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="仿tabbarView,通知,block" backgroundImage="RedButton"/>
+                    <connections>
+                        <action selector="tabbarViewOnClick:" destination="-1" eventType="touchUpInside" id="3xJ-Zp-jWe"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6I-bS-9Bi">
+                    <rect key="frame" x="0.0" y="538.5" width="414" height="34.5"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="网易界面搭建,UICollectionView" backgroundImage="RedButton"/>
+                    <connections>
+                        <action selector="wangYiOnClick:" destination="-1" eventType="touchUpInside" id="IA8-Db-CdP"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="RTs-BR-W8e" firstAttribute="leading" secondItem="z82-F4-2Wx" secondAttribute="leading" id="0GL-WL-Pw5"/>
+                <constraint firstItem="8TZ-lP-BiS" firstAttribute="leading" secondItem="RTs-BR-W8e" secondAttribute="leading" id="0p7-Zf-0uM"/>
+                <constraint firstItem="pZi-nP-H8k" firstAttribute="trailing" secondItem="Sm5-dq-hhm" secondAttribute="trailing" id="30b-Ca-gGm"/>
+                <constraint firstItem="RTs-BR-W8e" firstAttribute="top" secondItem="z82-F4-2Wx" secondAttribute="bottom" id="3rU-ex-tp9"/>
+                <constraint firstItem="z82-F4-2Wx" firstAttribute="leading" secondItem="Azg-bV-baL" secondAttribute="leading" id="4ax-We-kcj"/>
+                <constraint firstItem="hmK-aG-H2b" firstAttribute="top" secondItem="lQc-Y9-vbH" secondAttribute="bottom" id="60P-hX-hvA"/>
+                <constraint firstItem="hmK-aG-H2b" firstAttribute="leading" secondItem="lQc-Y9-vbH" secondAttribute="leading" id="73W-HG-RKH"/>
+                <constraint firstItem="Sm5-dq-hhm" firstAttribute="top" secondItem="hmK-aG-H2b" secondAttribute="bottom" id="8Eh-0r-mxG"/>
+                <constraint firstItem="Sm5-dq-hhm" firstAttribute="top" secondItem="hmK-aG-H2b" secondAttribute="bottom" id="9Xn-3B-5mz"/>
+                <constraint firstItem="RTs-BR-W8e" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ajb-Qp-US6"/>
+                <constraint firstItem="YFr-er-5vU" firstAttribute="trailing" secondItem="alc-w9-CSY" secondAttribute="trailing" id="DWx-jO-rTM"/>
+                <constraint firstItem="pZi-nP-H8k" firstAttribute="top" secondItem="Sm5-dq-hhm" secondAttribute="bottom" id="G2l-fP-iXD"/>
+                <constraint firstItem="alc-w9-CSY" firstAttribute="trailing" secondItem="wYv-YH-bHd" secondAttribute="trailing" id="G8K-Wc-tX4"/>
+                <constraint firstItem="8TZ-lP-BiS" firstAttribute="top" secondItem="RTs-BR-W8e" secondAttribute="bottom" id="Gl7-8I-IG2"/>
+                <constraint firstItem="wYv-YH-bHd" firstAttribute="top" secondItem="8TZ-lP-BiS" secondAttribute="bottom" id="KIQ-GY-cY6"/>
+                <constraint firstItem="B6I-bS-9Bi" firstAttribute="trailing" secondItem="fFB-e1-4dd" secondAttribute="trailing" id="KK8-RE-21e"/>
+                <constraint firstItem="z82-F4-2Wx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="LCb-ls-zGk"/>
+                <constraint firstItem="lQc-Y9-vbH" firstAttribute="top" secondItem="Azg-bV-baL" secondAttribute="bottom" id="MF9-Sh-XIN"/>
+                <constraint firstItem="z82-F4-2Wx" firstAttribute="top" secondItem="pZi-nP-H8k" secondAttribute="bottom" id="McR-eV-6tg"/>
+                <constraint firstItem="fFB-e1-4dd" firstAttribute="leading" secondItem="YFr-er-5vU" secondAttribute="leading" id="NBT-mZ-jAC"/>
+                <constraint firstItem="Sm5-dq-hhm" firstAttribute="leading" secondItem="hmK-aG-H2b" secondAttribute="leading" id="NnW-fQ-2uk"/>
+                <constraint firstItem="z82-F4-2Wx" firstAttribute="trailing" secondItem="Azg-bV-baL" secondAttribute="trailing" id="S40-bQ-gsy"/>
+                <constraint firstItem="z82-F4-2Wx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="T54-hI-akp"/>
+                <constraint firstItem="YFr-er-5vU" firstAttribute="leading" secondItem="alc-w9-CSY" secondAttribute="leading" id="Tmh-TU-beE"/>
+                <constraint firstItem="lQc-Y9-vbH" firstAttribute="trailing" secondItem="Azg-bV-baL" secondAttribute="trailing" id="V0l-sZ-t3F"/>
+                <constraint firstItem="hmK-aG-H2b" firstAttribute="trailing" secondItem="lQc-Y9-vbH" secondAttribute="trailing" id="VlT-R9-UGV"/>
+                <constraint firstItem="wYv-YH-bHd" firstAttribute="trailing" secondItem="8TZ-lP-BiS" secondAttribute="trailing" id="XaQ-qU-uSY"/>
+                <constraint firstItem="Sm5-dq-hhm" firstAttribute="trailing" secondItem="hmK-aG-H2b" secondAttribute="trailing" id="Xn8-5N-rab"/>
+                <constraint firstItem="fFB-e1-4dd" firstAttribute="trailing" secondItem="YFr-er-5vU" secondAttribute="trailing" id="Y65-HH-XaI"/>
+                <constraint firstItem="B6I-bS-9Bi" firstAttribute="leading" secondItem="fFB-e1-4dd" secondAttribute="leading" id="bRx-Wq-lSk"/>
+                <constraint firstItem="Azg-bV-baL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="cE6-mX-EOr"/>
+                <constraint firstItem="YFr-er-5vU" firstAttribute="top" secondItem="alc-w9-CSY" secondAttribute="bottom" id="eAm-tb-p9A"/>
+                <constraint firstItem="B6I-bS-9Bi" firstAttribute="top" secondItem="fFB-e1-4dd" secondAttribute="bottom" id="gtc-pA-eMJ"/>
+                <constraint firstItem="lQc-Y9-vbH" firstAttribute="leading" secondItem="Azg-bV-baL" secondAttribute="leading" id="h5D-2L-NO7"/>
+                <constraint firstItem="8TZ-lP-BiS" firstAttribute="trailing" secondItem="RTs-BR-W8e" secondAttribute="trailing" id="jLo-n2-3GY"/>
+                <constraint firstItem="alc-w9-CSY" firstAttribute="top" secondItem="wYv-YH-bHd" secondAttribute="bottom" id="jPc-bH-WWQ"/>
+                <constraint firstItem="fFB-e1-4dd" firstAttribute="top" secondItem="YFr-er-5vU" secondAttribute="bottom" id="k8g-8d-0F8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="z82-F4-2Wx" secondAttribute="trailing" id="rIN-0b-dbO"/>
+                <constraint firstItem="alc-w9-CSY" firstAttribute="leading" secondItem="wYv-YH-bHd" secondAttribute="leading" id="tVl-Sv-h2s"/>
+                <constraint firstItem="pZi-nP-H8k" firstAttribute="leading" secondItem="Sm5-dq-hhm" secondAttribute="leading" id="umQ-HO-zLl"/>
+                <constraint firstItem="RTs-BR-W8e" firstAttribute="trailing" secondItem="z82-F4-2Wx" secondAttribute="trailing" id="vCw-Nd-FIB"/>
+                <constraint firstItem="wYv-YH-bHd" firstAttribute="leading" secondItem="8TZ-lP-BiS" secondAttribute="leading" id="xOH-Qh-nMH"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="84.375"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LoginScreen" width="296.5" height="138.5"/>
+        <image name="RedButton" width="61.5" height="34.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,24 @@
+//
+//  CodeBase.pch
+//  CodeBase
+//
+//  Created by hongchen li on 2021/12/10.
+//  Copyright © 2021 shacokent. All rights reserved.
+//
+//PCH在xcode5 之后被干掉了，需要手动配置
+#ifndef CodeBase_pch
+#define CodeBase_pch
+
+#ifdef __OBJC__ //只有OC文件才导入
+
+#import "UIView+SKframe.h"
+#import "UIWindow+SK.h"
+#import "UIImage+SK.h"
+#import "SKSaveTool.h"
+#import "SKRootVC.h"
+#import "NSString+Hash.h"
+#define SKKeyWindow [UIWindow getKeyWindow]
+
+#endif
+
+#endif /* CodeBase_pch */
