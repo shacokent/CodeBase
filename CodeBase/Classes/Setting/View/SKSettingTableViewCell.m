@@ -15,6 +15,7 @@
     return [self cellWithTableView:tableView cellStyle:UITableViewCellStyleValue1];
 }
 
+
 +(instancetype)cellWithTableView:(UITableView*)tableView cellStyle:(UITableViewCellStyle)cellStyle{
     static NSString *cid=@"cell";
     SKSettingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cid];

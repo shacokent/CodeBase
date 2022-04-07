@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSArray * barItems;
 @property (nonatomic, weak) id<SKTabBarDelegate> delegate;
-
+-(void)buttonOnClick:(UIButton *)button;
 @end
 
 NS_ASSUME_NONNULL_END

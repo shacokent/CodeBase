@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -135,6 +136,15 @@
                         <action selector="wangYiOnClick:" destination="-1" eventType="touchUpInside" id="IA8-Db-CdP"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aet-c1-Ch2">
+                    <rect key="frame" x="0.0" y="573" width="414" height="34.5"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="应用跳转" backgroundImage="RedButton"/>
+                    <connections>
+                        <action selector="jumpApp:" destination="-1" eventType="touchUpInside" id="gmL-62-Psb"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -155,6 +165,7 @@
                 <constraint firstItem="8TZ-lP-BiS" firstAttribute="top" secondItem="RTs-BR-W8e" secondAttribute="bottom" id="Gl7-8I-IG2"/>
                 <constraint firstItem="wYv-YH-bHd" firstAttribute="top" secondItem="8TZ-lP-BiS" secondAttribute="bottom" id="KIQ-GY-cY6"/>
                 <constraint firstItem="B6I-bS-9Bi" firstAttribute="trailing" secondItem="fFB-e1-4dd" secondAttribute="trailing" id="KK8-RE-21e"/>
+                <constraint firstItem="aet-c1-Ch2" firstAttribute="leading" secondItem="B6I-bS-9Bi" secondAttribute="leading" id="L0C-Ta-sXH"/>
                 <constraint firstItem="z82-F4-2Wx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="LCb-ls-zGk"/>
                 <constraint firstItem="lQc-Y9-vbH" firstAttribute="top" secondItem="Azg-bV-baL" secondAttribute="bottom" id="MF9-Sh-XIN"/>
                 <constraint firstItem="z82-F4-2Wx" firstAttribute="top" secondItem="pZi-nP-H8k" secondAttribute="bottom" id="McR-eV-6tg"/>
@@ -170,12 +181,14 @@
                 <constraint firstItem="fFB-e1-4dd" firstAttribute="trailing" secondItem="YFr-er-5vU" secondAttribute="trailing" id="Y65-HH-XaI"/>
                 <constraint firstItem="B6I-bS-9Bi" firstAttribute="leading" secondItem="fFB-e1-4dd" secondAttribute="leading" id="bRx-Wq-lSk"/>
                 <constraint firstItem="Azg-bV-baL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="cE6-mX-EOr"/>
+                <constraint firstItem="aet-c1-Ch2" firstAttribute="trailing" secondItem="B6I-bS-9Bi" secondAttribute="trailing" id="cQQ-eM-qqq"/>
                 <constraint firstItem="YFr-er-5vU" firstAttribute="top" secondItem="alc-w9-CSY" secondAttribute="bottom" id="eAm-tb-p9A"/>
                 <constraint firstItem="B6I-bS-9Bi" firstAttribute="top" secondItem="fFB-e1-4dd" secondAttribute="bottom" id="gtc-pA-eMJ"/>
                 <constraint firstItem="lQc-Y9-vbH" firstAttribute="leading" secondItem="Azg-bV-baL" secondAttribute="leading" id="h5D-2L-NO7"/>
                 <constraint firstItem="8TZ-lP-BiS" firstAttribute="trailing" secondItem="RTs-BR-W8e" secondAttribute="trailing" id="jLo-n2-3GY"/>
                 <constraint firstItem="alc-w9-CSY" firstAttribute="top" secondItem="wYv-YH-bHd" secondAttribute="bottom" id="jPc-bH-WWQ"/>
                 <constraint firstItem="fFB-e1-4dd" firstAttribute="top" secondItem="YFr-er-5vU" secondAttribute="bottom" id="k8g-8d-0F8"/>
+                <constraint firstItem="aet-c1-Ch2" firstAttribute="top" secondItem="B6I-bS-9Bi" secondAttribute="bottom" id="lka-ig-rgb"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="z82-F4-2Wx" secondAttribute="trailing" id="rIN-0b-dbO"/>
                 <constraint firstItem="alc-w9-CSY" firstAttribute="leading" secondItem="wYv-YH-bHd" secondAttribute="leading" id="tVl-Sv-h2s"/>
                 <constraint firstItem="pZi-nP-H8k" firstAttribute="leading" secondItem="Sm5-dq-hhm" secondAttribute="leading" id="umQ-HO-zLl"/>

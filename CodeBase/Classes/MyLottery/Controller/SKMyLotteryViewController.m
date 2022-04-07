@@ -2053,4 +2053,12 @@ void task(void *param)
     [self.navigationController pushViewController:wangyi animated:YES];
 }
 
+- (IBAction)jumpApp:(UIButton *)sender {
+    NSURL *url = [NSURL URLWithString:@"mytest://new"];
+    if([[UIApplication sharedApplication] canOpenURL:url]){
+        [[UIApplication sharedApplication] openURL:url];
+    }
+}
+
+
 @end

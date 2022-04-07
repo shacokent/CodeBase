@@ -11,7 +11,7 @@
 #import <UMCommonLog/UMCommonLogHeaders.h>
 #import <UMAPM/UMCrashConfigure.h>
 #import <UMCommon/MobClick.h>
-
+#import "SKTabBar.h"
 @interface AppDelegate ()
 
 @end
@@ -64,6 +64,20 @@
     //8.队列中任务的处理方式:FIFO先进先出，可设置
     //9.如何下载图片的? 发送网络请求下载图片,NSURLConnection
     //10.请求超时的时间 15秒    
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    NSLog(@"监测通过URL打开我们的CodeBase APP---%@",url);
+    if([url.host isEqualToString:@"history"]){
+        //跳转history
+        UITabBarController *nav = (UITabBarController*)self.window.rootViewController;
+        for(UIView * view in nav.tabBar.subviews){
+            if([view isKindOfClass:[SKTabBar class]]){
+                [((SKTabBar*)view) buttonOnClick:view.subviews[3]];
+            }
+        }
+    }
+    return YES;
 }
 
 @end
