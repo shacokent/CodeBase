@@ -43,7 +43,6 @@
 @end
 
 @implementation SKMyLotteryViewController
-
 - (NSCache *)cache{
     if(_cache == nil){
         _cache = [[NSCache alloc] init];
@@ -1910,12 +1909,13 @@ void task(void *param)
    //id objc = [NSObject alloc]; 等同于 ( (NSObject *(*)(id,SEL))(void *) objc_msgSend )([NSObject class],@selector(alloc));
     //简写,需要在build settings中搜索msg,改成NO
 //    分配内存
-    id objc = objc_msgSend(objc_getClass("NSObject"),sel_registerName("alloc"));//(发送消息第一种写法)
+    id (* my_objc_msgSend)(id,SEL) = (id (*) (id,SEL))objc_msgSend;//真机不能直接使用objc_msgSend，必须加上这句声明自己的objc_msgSend才能用，否则报错
+    id objc = my_objc_msgSend(objc_getClass("NSObject"),sel_registerName("alloc"));//(发送消息第一种写法)
 //    id objc = objc_msgSend([NSObject class],@selector(alloc));//(发送消息第二种写法)
     
 //    初始化
     //objc = [objc init]; 等同于 ( (NSObject *(*)(id,SEL))(void *) objc_msgSend )([NSObject class],@selector(init));
-    objc = objc_msgSend(objc,sel_registerName("init"));//(发送消息第一种写法)
+    objc = my_objc_msgSend(objc,sel_registerName("init"));//(发送消息第一种写法)
 //    objc = objc_msgSend(objc,@selector(init));//(发送消息第二种写法)
     
     
@@ -1924,8 +1924,10 @@ void task(void *param)
     //2.不得不用：当.h文件注释掉方法声明，但是.m文件中有私有方法时（多用在系统方法）
     
 //    补充：:方法都是有前缀的，谁的事情谁开头
-//    如：objc调用run，第一个参数就是objc
-    //    objc_msgSend(objc, @selector(run:),20);
+//    如：objc调用isKindOfClass，第一个参数就是objc
+    BOOL (* my_objc_msgSend_withInt)(id,SEL,__unsafe_unretained Class) = (BOOL (*) (id,SEL,__unsafe_unretained Class))objc_msgSend;//真机不能直接使用objc_msgSend，必须加上这句声明自己的objc_msgSend才能用，否则报错
+    BOOL isKindOfClassValue = my_objc_msgSend_withInt(objc, @selector(isKindOfClass:),[self class]);
+    NSLog(@"%@",isKindOfClassValue?@"YES":@"NO");
     //带参数
 //    如果objc中有方法-(void)run:(NSInteger)metre{}
 //    objc_msgSend(objc, @selector(run:),20);
@@ -2056,7 +2058,11 @@ void task(void *param)
 - (IBAction)jumpApp:(UIButton *)sender {
     NSURL *url = [NSURL URLWithString:@"mytest://new"];
     if([[UIApplication sharedApplication] canOpenURL:url]){
-        [[UIApplication sharedApplication] openURL:url];
+        if(@available(iOS 10.0, *)){
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+        } else {
+            [[UIApplication sharedApplication] openURL:url];
+        }
     }
 }
 

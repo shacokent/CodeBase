@@ -11,7 +11,8 @@
 #import <UMCommonLog/UMCommonLogHeaders.h>
 #import <UMAPM/UMCrashConfigure.h>
 #import <UMCommon/MobClick.h>
-#import "SKTabBar.h"
+#import <objc/message.h>
+
 @interface AppDelegate ()
 
 @end
@@ -71,9 +72,12 @@
     if([url.host isEqualToString:@"history"]){
         //跳转history
         UITabBarController *nav = (UITabBarController*)self.window.rootViewController;
+        [nav dismissViewControllerAnimated:YES completion:nil];
         for(UIView * view in nav.tabBar.subviews){
-            if([view isKindOfClass:[SKTabBar class]]){
-                [((SKTabBar*)view) buttonOnClick:view.subviews[3]];
+            if([view isKindOfClass: NSClassFromString(@"SKTabBar")]){
+                //不报漏sktabBar的方法，使用runtime
+                void (* my_objc_msgSend_withView)(id,SEL,UIView*) = (void (*) (id,SEL,UIView*))objc_msgSend;//真机不能直接使用objc_msgSend，必须加上这句声明自己的objc_msgSend才能用，否则报错
+                my_objc_msgSend_withView(view, @selector(buttonOnClick:),view.subviews[3]);
             }
         }
     }
