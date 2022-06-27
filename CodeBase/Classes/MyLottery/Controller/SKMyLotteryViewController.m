@@ -1739,6 +1739,28 @@ void task(void *param)
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             NSLog(@"error---%@",error);
+            //版本大于4.0.1
+            // 获取错误信息mutableUserInfo
+            NSError *mutableUserInfo = error.userInfo[NSUnderlyingErrorKey];
+            // 获取错误响应请求信息
+            NSHTTPURLResponse *urlResponse = mutableUserInfo.userInfo[AFNetworkingOperationFailingURLResponseErrorKey];
+            // 获取错误响应信息
+            NSString *errStr = [[NSString alloc] initWithData: mutableUserInfo.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding: NSUTF8StringEncoding];
+            if (urlResponse.statusCode == 302) {
+              // 状态为302
+              //  TODO
+            }
+
+//            旧版
+            // 通过error信息进行获取
+            NSDictionary *response = [NSJSONSerialization JSONObjectWithData:error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] options:0 error:nil];
+
+            // 错误码
+            response[@"status"];
+            // 错误消息
+            response[@"message"];
+
+            
         }];
     
 //    2.发送PSOT请求，自动启动resume，可上传文件//推荐
